@@ -1,4 +1,4 @@
-# EE1L1 IP-1 "Booming Bass Project"
+# EE1L1 (IP-1) "Booming Bass Sound Amplifying System"
 
 The final report of the "Booming Bass Sound Amplifying System" Integrated Project-1 of BSc Electrical Engineering, where a full sound amplifying system was designed and built to obtain a smooth/flat acoustic response. The amplifying system consists of multiple subsystems.
 
