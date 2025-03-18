@@ -1,0 +1,95 @@
+
+
+\begin{flalign*}
+    \mathbf{E(\omega)} = \frac{R_2 C_1 s}{s R_1 C_1 + 1}, \quad \mathbf{F(\omega)} = \frac{1}{s R_a C_a + 1}, \quad \mathbf{G(\omega)} = \frac{R_C}{R_b + \frac{1}{s C_x}}+1
+\end{flalign*}
+
+Let $a = R_2 C_1$, $b = R_a C_a$, $d =ab$, $f = R_b C_x$, and $k = R_2 C_1 R_c C_x$:
+\begin{flalign*}
+    \frac{sa}{s a + 1}\left(\frac{1}{s b + 1}\right) = \frac{sa }{(s a + 1)(s b + 1)}
+\end{flalign*}
+\begin{flalign*}
+    \mathbf{H(\omega)} = \frac{sa}{s^2 d + s a + s b + 1}=\frac{sa}{e}
+\end{flalign*}
+where $e = s^2 d + s a + s b  + 1$, gives:
+\begin{flalign*}
+    \frac{sa }{e}\left(\frac{R_C}{R_b + \frac{1}{s C_x}}+1 \right) = \frac{sa }{e}\left( \frac{s R_C C_x}{s R_b C_x  + 1}+1 \right)
+\end{flalign*}
+
+
+
+
+
+
+\[
+\frac{s a}{e} + \frac{s^2 k}{e(sR_b C_x+1)} = \frac{s a (sf + 1) + s^2 k}{e \big(sf + 1 \big)}
+\]
+
+\[\frac{s^2( af+ k) + s a }{e \big(sf + 1 \big)}\]
+
+Substituting all of the variables given earlier, gives:
+\begin{flalign*}
+    \mathbf{H(\omega)} = \frac{s^2 R_2 C_1 R_b C_x + s^2 R_2 C_1 R_c C_x+ s R_2 C_1 }{(s^2 C_1 C_a R_2 R_a + sC_a R_a + sC_1 R_2+1)(R_b C_x s + 1 )}
+\end{flalign*}
+\begin{flalign}\label{eq: third order}
+    e(sf+1) &= (s^2 d+ s(a+b) +1)(sf + 1 ) \notag\\
+            &= s^3df + s^2f(a+b) +sf + s^2d + s(a+b) + 1 \notag\\
+            &= s^3df + s^2(f(a+b) + d) + s(a+b+f) + 1
+\end{flalign}
+
+Thus giving:
+\begin{flalign*}
+    \mathbf{H(\omega)} = \frac{s^2( af+ k) + s a }{s^3df + s^2(f(a+b) + d) + s(a+b+f) + 1}
+\end{flalign*}
+Let $t = a+b+f$, $q = af + k$, and $r = f(a+b) + d$:
+
+%( \[\frac{\frac{1}{s^2}}{\frac{1}{s^2}} \cdot H(\omega) = \frac{R_2 C_1 R_b C_x + R_c R_2 C_1 C_x+  \frac{R_2 C_1}{s} }{sdf + f(a+b) + d + \frac{1}{s}(a+b+f) + \frac{1}{s^2}}\])\\
+This gives: 
+\begin{flalign}
+\mathbf{H(\omega)} &= \frac{s^2q+ s a }{ (s^2r + 1) + s(s^2df + t)}
+\end{flalign}
+\subsubsection{Derivation for Phase Formula}
+\label{sec: phase calc}
+To calculate the phase, $\mathbf{H(\omega)}$ must be multiplied by its complex conjugate. After separating the real and imaginary parts of the enumerator, the expression becomes:
+\begin{flalign*}
+    \mathbf{H(\omega)} &= \frac{s^2q+ s a }{ (s^2r + 1) + s(s^2df + t)}\left(\frac{(s^2r + 1) - s(s^2df + t)}{(s^2r + 1) - s(s^2df + t)}\right)\\
+                        &= \frac{(s^2q + s a)((s^2r + 1) - s(s^2df + t)) }{ (s^2r + 1)^2 - s^2(s^2df + t)^2}
+\end{flalign*}
+\begin{flalign*}
+    h = (s^2r + 1)^2 - s^2(s^2df + t)^2
+\end{flalign*}
+
+Multiplying the denominator by the first part of the conjugate results in:
+\begin{flalign*}
+    &= (s^2q+ s a)(s^2r + 1) \\
+    &=s^4qr +  s^3ar +s^2q + sa
+\end{flalign*}
+And thus giving for its real and imaginary part:
+\begin{flalign*}
+    \text{Re}_1= \frac{\omega^4qr - \omega^2q}{h} \\
+    \text{Im}_1 = \frac{\omega a-\omega^3ar}{h}
+\end{flalign*}
+
+Multiplying the denominator by the second part of the conjugate results in:
+\begin{flalign*}
+    (s^2q+ s a)(-s(s^2df + t) ) &= -s(s^2q+ s a)(s^2df + t ) \\
+                                &=-s^5dfq - s^3qt - s^2at - s^4adf
+\end{flalign*}
+
+Thus resulting in: 
+\begin{flalign*}
+    \text{Re}_2 = \frac{\omega^2at-\omega^4adf}{h} \\
+    \text{Im}_2 = \frac{\omega^3qt-\omega^5dfq}{h}
+\end{flalign*}
+
+For the total real and imaginary part, the following holds:
+\begin{flalign*}
+    \text{Re} = \text{Re}_1 + \text{Re}_2 \notag\\
+    \text{Im} = \text{Im}_1 + \text{Im}_2 \notag\\
+    \phi_{\text{Phase}} = \arctan\left(\frac{\text{Im}}{\text{Re}}\right)
+\end{flalign*}
+
+
+
+
+
